@@ -16,8 +16,15 @@
 }
 
 .Pokecard-image {
-    padding: 25px;
-    margin: 15px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    margin: 10px;
     border-radius: 8px;
     background-color: rgb(238, 238, 238);
+}
+
+.Pokecard img:hover {
+    transform: scale(1.25);
 }

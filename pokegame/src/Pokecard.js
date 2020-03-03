@@ -24,7 +24,9 @@ class Pokecard extends Component {
 
     return (
       <div className="Pokecard">
-        <img className="Pokecard-image" src={generateSource(id)} alt={name}/>
+        <div className="Pokecard-image">
+            <img src={generateSource(id)} alt={name}/>
+        </div>
         <p className="Pokecard-name">{name}</p>
         <p className="Pokecard-type"> Type: {type}</p>
         <p className="Pokecard-exp">EXP: {base_experience}</p>
