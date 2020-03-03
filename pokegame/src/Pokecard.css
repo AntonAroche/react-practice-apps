@@ -1,3 +1,14 @@
 .Pokecard {
-    background-color: wheat;
+    padding: 15px 45px;
+    margin: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    flex-wrap: wrap;
+    background-color: lightgray;
+}
+
+.Pokecard-name {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
 }
