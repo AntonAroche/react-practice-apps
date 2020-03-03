@@ -1,0 +1,19 @@
+.Pokedex {
+    padding: 5px;
+}
+
+.Pokedex-won {
+    font-size: 30px;
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.Pokedex-lost {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(241, 50, 107);
+}
+
+.Pokedex-exp {
+    font-size: px;
+}

@@ -4,7 +4,7 @@ import "./Pokecard.css";
 /**
  * Gets a pretty image source directly from Pokemon's assets.
  * Has to be padded with zeros to 3 places.
- * @param {*} id 
+ * @param {Integer} id 
  */
 function generateSource(id) {
     let convertedId
