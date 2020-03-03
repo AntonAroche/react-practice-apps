@@ -1,5 +1,5 @@
 .App {
-  background-color: lightcoral;
+  background-color: rgb(241, 25, 25);
   text-align: center;
 }
 
@@ -10,7 +10,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: gray;
+  color: black;
+  font-weight: bold;
 }
 
 .App-main {
