@@ -6,7 +6,7 @@ import Pokedex from "./Pokedex";
  * @param {Array} pokemon
  */
 function getPokeDexes(pokemon) {
-  if (pokemon.length % 2 != 0) {
+  if (pokemon.length % 2 !== 0) {
     pokemon.pop();
   }
 
