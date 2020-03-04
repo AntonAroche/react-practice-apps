@@ -25,10 +25,10 @@ function getWrittenNum (num) {
 }
 class Die extends Component {
   static defaultProps = {
-    diceNum: 1
+    dieNum: 1
   };
   render() {
-    return <i className="Die" class={`fas fa-dice-${getWrittenNum(this.props.diceNum)}`}></i>;
+    return <i className="Die" class={`fas fa-dice-${getWrittenNum(this.props.dieNum)}`}></i>;
   }
 }
 
