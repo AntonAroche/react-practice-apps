@@ -2,4 +2,4 @@
 
 Component that rolls an animated pair of dice.
 
-![RollDice Screenshot](./images/DiceRoll.gif)
+![RollDice Screenshot](../images/DiceRoll.gif)
