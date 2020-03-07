@@ -1,12 +1,18 @@
 # React Practice Apps
 
-These are the apps I've made while improving my skills in react. Enjoy! 
+These are the apps I've made while improving my skills in react. Enjoy!
 
 ## Roll Dice
 
 Component that rolls an animated pair of dice.
 
 ![RollDice Screenshot](./images/DiceRoll.gif)
+
+## Color boxes
+
+Component that holds a set of boxes that you can click to change their color.
+
+![ColorBoxes Screenshot](./images/ColorBoxes.gif)
 
 ## Pokegame
 
