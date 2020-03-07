@@ -12,9 +12,18 @@ function randomColor() {
 class Colorbox extends Component {
     state = { color: randomColor() }
 
+    setRandomColour = e => {
+        let newColor
+        do {
+            newColor = randomColor() 
+        } while (newColor === this.state.color)
+        
+        this.setState({color: newColor})
+    }
+
     render() { 
         return ( 
-            <div className="Colorbox" style={{backgroundColor: this.state.color}}>
+            <div className="Colorbox" onClick={this.setRandomColour} style={{backgroundColor: this.state.color}}>
             </div>
          );
     }
