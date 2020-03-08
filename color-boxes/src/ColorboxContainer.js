@@ -41,7 +41,7 @@ class ColorboxContainer extends Component {
     return (
       <div className="ColorboxContainer">
         {this.state.colors.map((c, i) => (
-          <Colorbox color={c} index={i} changeColor={this.changeColor} />
+          <Colorbox color={c} ={i} changeColor={this.changeColor} />
         ))}
       </div>
     );
