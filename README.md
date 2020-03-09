@@ -2,6 +2,12 @@
 
 These are the apps I've made while improving my skills in react. Enjoy!
 
+## Hangman
+
+Play a game of hangman in your browser!
+
+![Hangman Screenshot](./images/hangman.gif)
+
 ## Roll Dice
 
 Component that rolls an animated pair of dice.
