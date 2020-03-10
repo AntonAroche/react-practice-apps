@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Todo extends Component {
-    defaultProps = {
-        task: "Water the dog"
-    }
+  static defaultProps = {
+    task: "Water the dog"
+  };
 
-    render() { 
-        return (
-            <div className="Todo">
-                {this.props.task}
-            </div>
-        );
-    }
+  render() {
+    return <div className="Todo">
+            {this.props.task}
+        </div>;
+  }
 }
- 
+
 export default Todo;
