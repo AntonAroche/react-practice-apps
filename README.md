@@ -2,6 +2,12 @@
 
 These are the apps I've made while improving my skills in react. Enjoy!
 
+## Lights Out
+
+The goal of lights out is to turn off all the lights in the grid. Clicking a light flips it and the lights adjacent to it. Good luck!
+
+![Lights Out Screenshot](./images/lights-out.gif)
+
 ## Hangman
 
 Play a game of hangman in your browser!
