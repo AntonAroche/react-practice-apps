@@ -19,26 +19,29 @@ class TodoList extends Component {
     });
   };
 
-  editTodo = (newTodo) => {
-    const newTodos = (this.state.todos.map(todo => {
-        if (todo.id === newTodo.id) {
-            return newTodo
-        }
-        return todo
-    }))
+  editTodo = newTodo => {
+    const newTodos = this.state.todos.map(todo => {
+      if (todo.id === newTodo.id) {
+        return newTodo
+      }
+      return todo;
+    });
 
-    this.setState({todos: newTodos})
-  }
+    this.setState({ todos: newTodos });
+  };
 
   render() {
     const todos = this.state.todos.map(t => {
       return (
-        <Todo 
-            task={t.task} 
-            id={t.id} 
-            key={t.id} 
-            editTodo={this.editTodo}
-            deleteTodo={this.deleteTodo} />
+        <Todo
+          task={t.task}
+          // TODO Use destructure
+          id={t.id}
+          key={t.id}
+          completed={t.completed}
+          editTodo={this.editTodo}
+          deleteTodo={this.deleteTodo}
+        />
       );
     });
 

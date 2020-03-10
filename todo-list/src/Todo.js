@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Todo.css"
 
 class Todo extends Component {
   state = {
@@ -26,9 +27,18 @@ class Todo extends Component {
     evt.preventDefault();
     this.props.editTodo({
         task: this.state.task,
-        id: this.props.id
+        id: this.props.id,
+        completed: this.props.completed
     })
     this.setState({isEditing: false})
+  }
+
+  toggleComplete = () => {
+    this.props.editTodo({
+        task: this.state.task,
+        id: this.props.id,
+        completed: !this.props.completed
+    })
   }
 
   render() {
@@ -48,9 +58,9 @@ class Todo extends Component {
         )
     }
     return <div className="Todo" >
-            <p className="Todo-task" contentEditable={this.props.editable}>
+            <li className={this.props.completed && 'completed'} onClick={this.toggleComplete}>
                 {this.props.task}
-            </p>
+            </li>
             <button onClick={this.handleEdit}>Edit</button>
             <button onClick={this.handleDelete}>X</button>
         </div>;
