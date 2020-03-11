@@ -44,25 +44,32 @@ class Todo extends Component {
   render() {
     if (this.state.isEditing) {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className="Todo">
+                <form className="Todo-edit-form" onSubmit={this.handleSubmit}>
                     <input 
                         id="task"
                         name="task"
                         value={this.state.task}
                         onChange={this.handleChange}
                         placeholder={this.props.task}/>
-                    <button>GO</button>
+                    <button>Save</button>
                 </form>
             </div>
         )
     }
     return <div className="Todo" >
-            <li className={this.props.completed && 'completed'} onClick={this.toggleComplete}>
+            <li className={this.props.completed ? "Todo-task completed" : "Todo-task"} 
+                onClick={this.toggleComplete}>
                 {this.props.task}
             </li>
-            <button onClick={this.handleEdit}>Edit</button>
-            <button onClick={this.handleDelete}>X</button>
+            <div className="Todo-buttons">
+                <button onClick={this.handleEdit}>
+                    <i class='fas fa-pen' />
+                </button>
+                <button onClick={this.handleDelete}>
+                    <i class='fas fa-trash' />
+                </button>
+            </div>
         </div>;
   }
 }
