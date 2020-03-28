@@ -10,9 +10,7 @@
   margin-right: 1em;
 }
 
-/* THE NICER STYLES MADE FOR THE FONT-AWESOME ICONS... */
-
-/* .Die {
+.Die {
   color: white;
   text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -43,4 +41,4 @@
   100% {
     transform: rotate(360deg);
   }
-} */
+}
