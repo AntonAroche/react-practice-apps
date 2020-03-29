@@ -2,9 +2,15 @@
 
 These are the apps I've made while improving my skills in react. Enjoy!
 
+## Yahtzee
+
+Play a game of Yahtzee! The goal is to get as many points as possible by rerolling dice for certain combinations.
+
+![Yahtzee Screenshot](./images/yahtzee.gif)
+
 ## Todo List
 
-This small lets you store your tasks in a convenient todo list, edit your tasks, and mark them for completion.
+This application lets you store your tasks in a convenient todo list, edit your tasks, and mark them for completion.
 
 ![Todo List Screenshot](./images/todo-list.gif)
 
