@@ -8,6 +8,12 @@ Play a game of Yahtzee! The goal is to get as many points as possible by rerolli
 
 ![Yahtzee Screenshot](./images/Yahtzee.gif)
 
+## Card Dealer
+
+This component uses AJAX requests to randomly draw cards from a deck.
+
+![Card Dealer Screenshot](./images/card-deck.gif)
+
 ## Todo List
 
 This application lets you store your tasks in a convenient todo list, edit your tasks, and mark them for completion.

@@ -22,21 +22,19 @@ class Deck extends Component {
   drawCard = () => {
     const newCardUrl = `https://deckofcardsapi.com/api/deck/${this.state.deckId}/draw/`;
 
-    axios.get(newCardUrl).then(response => {
-      const card = response.data.cards[0];
-      const emptyDeck = response.data.remaining === 0;
+    if (!this.state.emptyDeck) {
+      axios.get(newCardUrl).then(response => {
+        const card = response.data.cards[0];
+        const emptyDeck = response.data.remaining === 0;
 
-      this.setState(state => {
-        return {
-          emptyDeck: emptyDeck,
-          cards: state.cards.concat(card)
-        };
+        this.setState(state => {
+          return {
+            emptyDeck: emptyDeck,
+            cards: state.cards.concat(card)
+          };
+        });
       });
-
-      if (emptyDeck) {
-        alert("You drew all the cards!");
-      }
-    });
+    }
   };
 
   generateCards() {
@@ -59,7 +57,7 @@ class Deck extends Component {
           onClick={this.drawCard}
           disabled={disabled}
         >
-          Draw a card!
+          {disabled ? "Out of cards" : "Draw a card!"}
         </button>
         <div className="Deck-cards">{this.generateCards()}</div>
       </div>
