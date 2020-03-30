@@ -8,6 +8,7 @@ const newDeckUrl = "https://deckofcardsapi.com/api/deck/new/shuffle/";
 class Deck extends Component {
   state = {
     deckId: "",
+    emptyDeck: false,
     cards: []
   };
   async componentDidMount() {
@@ -23,9 +24,11 @@ class Deck extends Component {
 
     axios.get(newCardUrl).then(response => {
       const card = response.data.cards[0];
+      const emptyDeck = response.data.remaining === 0;
 
       this.setState(state => {
         return {
+          emptyDeck: emptyDeck,
           cards: state.cards.concat(card)
         };
       });
@@ -45,7 +48,11 @@ class Deck extends Component {
   render() {
     return (
       <div className="Deck">
-        <button className="Deck-Button" onClick={this.drawCard}>
+        <button
+          className="Deck-Button"
+          onClick={this.drawCard}
+          disabled={this.state.emptyDeck}
+        >
           Draw a card!
         </button>
         {this.generateCards()}
