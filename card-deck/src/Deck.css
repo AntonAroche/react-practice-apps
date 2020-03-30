@@ -1,5 +1,42 @@
-.Deck-Button {
-  width: 25em;
-  height: 10em;
-  background-color:paleturquoise;
+.Deck {
+  font-family: "Slabo", serif;
+}
+
+.Deck-title {
+  color: azure;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.Deck-cards {
+  margin-top: 4em;
+}
+
+.Deck-btn {
+  background: none;
+  border: 2px solid;
+  outline: none;
+  font: inherit;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: #009688;
+  transition: 0.25s;
+}
+
+.Deck-btn:hover {
+  border-color: #4caf50;
+  color: white;
+  box-shadow: inset 0 0 0 2em #4caf50;
+}
+
+.Deck-btn-disabled {
+    background: none;
+    border: 2px solid;
+    outline: none;
+    font: inherit;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: gray;
+    cursor: not-allowed;
 }

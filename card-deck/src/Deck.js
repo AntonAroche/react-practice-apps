@@ -32,6 +32,10 @@ class Deck extends Component {
           cards: state.cards.concat(card)
         };
       });
+
+      if (emptyDeck) {
+        alert("You drew all the cards!");
+      }
     });
   };
 
@@ -46,16 +50,18 @@ class Deck extends Component {
   }
 
   render() {
+    const disabled = this.state.emptyDeck;
     return (
       <div className="Deck">
+        <h1 className="Deck-title">♦ Card Dealer ♦</h1>
         <button
-          className="Deck-Button"
+          className={disabled ? "Deck-btn-disabled" : "Deck-btn"}
           onClick={this.drawCard}
-          disabled={this.state.emptyDeck}
+          disabled={disabled}
         >
           Draw a card!
         </button>
-        {this.generateCards()}
+        <div className="Deck-cards">{this.generateCards()}</div>
       </div>
     );
   }
