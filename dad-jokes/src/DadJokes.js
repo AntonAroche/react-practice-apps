@@ -16,11 +16,13 @@ class DadJokes extends Component {
   };
 
   state = {
-    jokes: [],
+    jokes: JSON.parse(window.localStorage.getItem("jokes") || []),
   };
 
-  async componentDidMount() {
-    this.getJokes();
+  componentDidMount() {
+    if (this.state.jokes.length === 0) {
+      this.getJokes();
+    }
   }
 
   async getJokes() {
@@ -35,17 +37,25 @@ class DadJokes extends Component {
         votes: 0,
       });
     }
-    this.setState({
-      jokes: retrievedJokes,
-    });
+    this.setState(
+      (st) => ({
+        jokes: [...st.jokes, ...retrievedJokes],
+      }),
+      () =>
+        window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes))
+    );
   }
 
   handleVote = (jokeId, delta) => {
-    this.setState({
-      jokes: this.state.jokes.map((j) => {
-        return j.id === jokeId ? { ...j, votes: j.votes + delta } : j;
+    this.setState(
+      (st) => ({
+        jokes: st.jokes.map((j) =>
+          j.id === jokeId ? { ...j, votes: j.votes + delta } : j
+        ),
       }),
-    });
+      () =>
+        window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes))
+    );
   };
 
   render() {
