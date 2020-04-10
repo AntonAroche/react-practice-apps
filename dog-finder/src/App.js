@@ -58,7 +58,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar dogs={dogs}/>
+        <div className="container">
         <Routes dogs={dogs}/>
+        </div>
       </div>
     );
   }

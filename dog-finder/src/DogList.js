@@ -7,19 +7,15 @@ class DogList extends Component {
     const renderedLinks = this.props.dogs.map((d) => {
       return (
         <Link className="Dog col-lg-4 text-center" to={`/dogs/${d.name}`}>
-          <img src={d.src} alt={d.name} />
-          <h3>{d.name}</h3>
+          <img className="mt-2" src={d.src} alt={d.name} />
+          <h3 className="underline mt-3">{d.name}</h3>
         </Link>
       );
     });
     return (
       <div className="DogList">
-        <h1 className="display-1 text-center">Dog List!</h1>
-        <div className="container">
-          <div className="row">
-            {renderedLinks}
-          </div>
-        </div>
+        <h1 className="display-1 text-center DogList-header">Dog List!</h1>
+        <div className="row">{renderedLinks}</div>
       </div>
     );
   }
