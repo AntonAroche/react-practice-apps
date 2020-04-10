@@ -15,7 +15,7 @@ class Dog extends Component {
             <div className="Dog">
                 <h1 className="Dog-name">{name}</h1>
                 <h2 className="Dog-age">Age: {age}</h2>
-                <img src={src}/>
+                <img src={src} alt={name}/>
                 {renderFacts}
             </div>
         );

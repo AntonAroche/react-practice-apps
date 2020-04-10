@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect} from "react-router-dom";
 import "./App.css";
 import whiskey from "./images/whiskey.jpg";
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
 import ollie from "./images/ollie.jpeg";
-import Dog from './Dog.js'
+import Dog from "./Dog";
+import DogList from "./DogList";
 
 class App extends Component {
   static defaultProps = {
@@ -54,15 +55,17 @@ class App extends Component {
   };
 
   render() {
-    const dogRoutes = this.props.dogs.map((d) => {
-      return <Route path={`/dogs/${d.name}`} render={() => <Dog dog={d}/>} />;
+    const {dogs} = this.props
+    const dogRoutes = dogs.map((d) => {
+      return <Route path={`/dogs/${d.name}`} render={() => <Dog dog={d} />} />;
     });
 
     return (
       <div className="App">
         <Switch>
           {dogRoutes}
-          <Route path="/dogs" render={() => <h1>Dogs!</h1>} />
+          <Route path="/dogs" render={() => <DogList dogs={dogs}/>} />
+          <Redirect to="/dogs" />
         </Switch>
       </div>
     );
