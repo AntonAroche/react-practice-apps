@@ -16,7 +16,7 @@ class Deck extends Component {
 
     this.setState({
       deckId: response.data.deck_id
-    });
+    });c
   }
 
   drawCard = () => {
