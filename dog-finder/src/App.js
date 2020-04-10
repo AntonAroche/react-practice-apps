@@ -6,6 +6,7 @@ import whiskey from "./images/whiskey.jpg";
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
 import ollie from "./images/ollie.jpeg";
+import tommy from "./images/tommy.jpeg"
 
 class App extends Component {
   static defaultProps = {
@@ -50,6 +51,16 @@ class App extends Component {
           "Ollie is always happy to see you!",
         ],
       },
+      {
+        name: "Tommy",
+        age: 8,
+        src: tommy,
+        facts: [
+          "Tommy will eat anything.",
+          "Tommy loves chasing his brother, Ollie.",
+          "Tommy can run like the wind!",
+        ],
+      }
     ],
   };
 

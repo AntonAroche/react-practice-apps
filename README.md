@@ -2,6 +2,12 @@
 
 These are the apps I've made while improving my skills in react. Enjoy!
 
+## Dog Finder
+
+This app uses React Router to show information on different dogs.
+
+![Dog Finder Screenshot](./images/dog-finder.gif)
+
 ## Dad Jokes
 
 This app retrieves a set of jokes from an API, which you can then upvote or downvote.
