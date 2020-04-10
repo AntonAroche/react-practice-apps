@@ -2,6 +2,12 @@
 
 These are the apps I've made while improving my skills in react. Enjoy!
 
+## Dad Jokes
+
+This app retrieves a set of jokes from an API, which you can then upvote or downvote.
+
+![Dad Jokes Screenshot](./images/Dadjokes.gif)
+
 ## Yahtzee
 
 Play a game of Yahtzee! The goal is to get as many points as possible by rerolling dice for certain combinations.
