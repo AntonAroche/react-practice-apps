@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import whiskey from "./images/whiskey.jpg";
 import hazel from "./images/hazel.jpg";
@@ -55,16 +55,20 @@ class App extends Component {
   };
 
   render() {
-    const {dogs} = this.props
-    const dogRoutes = dogs.map((d) => {
-      return <Route path={`/dogs/${d.name}`} render={() => <Dog dog={d} />} />;
-    });
+    const { dogs } = this.props;
+    const getDog = props => {
+      let name = props.match.params.name;
+      let currentDog = this.props.dogs.find(
+        dog => dog.name.toLowerCase() === name.toLowerCase()
+      )
+      return <Dog {...props} dog={currentDog} />
+    };
 
     return (
       <div className="App">
         <Switch>
-          {dogRoutes}
-          <Route path="/dogs" render={() => <DogList dogs={dogs}/>} />
+          <Route exact path="/dogs/:name" render={getDog} />
+          <Route exact path="/dogs" render={() => <DogList dogs={dogs} />} />
           <Redirect to="/dogs" />
         </Switch>
       </div>
